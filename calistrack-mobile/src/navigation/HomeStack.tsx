@@ -6,6 +6,7 @@ import AddRoutineExerciseScreen from '../screens/AddRoutineExerciseScreen';
 import CreateRoutineScreen from '../screens/CreateRoutineScreen';
 import RoutineDetailScreen from '../screens/RoutineDetailScreen';
 import WorkoutScreen from '../screens/WorkoutScreen';
+import WorkoutFocusScreen from '../screens/WorkoutFocusScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,14 @@ export default function HomeStack() {
       <Stack.Screen name="CreateRoutine" component={CreateRoutineScreen} />
       <Stack.Screen name="RoutineDetail" component={RoutineDetailScreen} />
       <Stack.Screen name="Workout" component={WorkoutScreen} />
+      <Stack.Screen
+        name="WorkoutFocus"
+        component={WorkoutFocusScreen}
+        options={{
+          headerShown: false,
+          gestureEnabled: false, // evita swipe back accidental
+        }}
+      />
     </Stack.Navigator>
   );
 }

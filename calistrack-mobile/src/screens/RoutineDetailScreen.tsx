@@ -100,6 +100,23 @@ export default function RoutineDetailScreen() {
       />
 
       <Pressable
+  onPress={() =>
+    navigation.navigate('WorkoutFocus', { routine })
+  }
+  style={{
+    backgroundColor: '#0a7',
+    padding: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+  }}
+>
+  <Text style={{ color: '#fff', fontSize: 16, fontWeight: 'bold' }}>
+    ▶️ Empezar entrenamiento
+  </Text>
+</Pressable>
+
+
+      <Pressable
   onPress={() => navigation.navigate('Workout', { routine })}
   style={{
     backgroundColor: '#111',
